@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "521115498918",
+    "project_id": "runpoints-app",
+    "storage_bucket": "runpoints-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521115498918:android:28291a30b346ee28907767",
+        "android_client_info": {
+          "package_name": "com.braga.run_points_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2VYQHNx4_-IGScSjjflYbLLlMrfhbvAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
