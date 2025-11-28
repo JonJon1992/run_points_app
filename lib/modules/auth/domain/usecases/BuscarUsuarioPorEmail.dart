@@ -15,4 +15,3 @@ class BuscarUsuarioPorEmail {
     return await repository.buscarPorEmail(email);
   }
 }
-

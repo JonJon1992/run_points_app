@@ -11,4 +11,3 @@ class LoginComGoogle {
     return await repository.loginComGoogle();
   }
 }
-

@@ -6,5 +6,7 @@ abstract class Binding extends Bindings {
 
 class AppBinding implements Bindings {
   @override
-  void dependencies() {}
+  void dependencies() {
+    // Dependências globais do app
+  }
 }

@@ -1,11 +1,12 @@
 import 'package:get/get.dart';
+
 import '../../domain/entities/Usuario.dart';
+import '../../domain/usecases/EnviarEmailRedefinicaoSenha.dart';
 import '../../domain/usecases/LoginComEmailESenha.dart';
 import '../../domain/usecases/LoginComGoogle.dart';
-import '../../domain/usecases/RegistrarComEmailESenha.dart';
 import '../../domain/usecases/Logout.dart';
 import '../../domain/usecases/ObterUsuarioAtual.dart';
-import '../../domain/usecases/EnviarEmailRedefinicaoSenha.dart';
+import '../../domain/usecases/RegistrarComEmailESenha.dart';
 
 /// Controller responsável por gerenciar o estado e lógica de autenticação.
 class AuthController extends GetxController {

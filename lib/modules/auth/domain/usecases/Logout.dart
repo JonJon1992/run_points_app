@@ -10,4 +10,3 @@ class Logout {
     return await repository.logout();
   }
 }
-

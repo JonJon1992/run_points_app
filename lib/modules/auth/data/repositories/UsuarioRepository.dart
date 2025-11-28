@@ -124,4 +124,3 @@ class UsuarioRepository implements IUsuarioRepository {
     }
   }
 }
-

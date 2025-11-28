@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+
 import '../../core/app.module.dart';
 import 'presentation/bindings/AuthBinding.dart';
 import 'presentation/pages/LoginPage.dart';

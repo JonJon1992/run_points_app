@@ -1,10 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
-import 'package:run_points_app/modules/auth/auth.module.dart';
+import 'package:run_points_app/modules/home/home.module.dart';
+import 'package:run_points_app/modules/splash/splash.module.dart';
 
 class AppModule extends Module {
   @override
-  List<Module> subModules = [AuthModule()];
+  List<Module> subModules = [SplashModule(), HomeModule()];
 }
 
 abstract class Module {

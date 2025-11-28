@@ -1,8 +1,9 @@
 import 'package:get/get.dart';
+
 import '../../domain/entities/Usuario.dart';
+import '../../domain/usecases/AtualizarUsuario.dart';
 import '../../domain/usecases/BuscarUsuarioPorEmail.dart';
 import '../../domain/usecases/CriarUsuario.dart';
-import '../../domain/usecases/AtualizarUsuario.dart';
 import '../../domain/usecases/RemoverUsuario.dart';
 
 /// Controller responsável por gerenciar o estado e lógica de apresentação

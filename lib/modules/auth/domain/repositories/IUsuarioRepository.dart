@@ -21,4 +21,3 @@ abstract class IUsuarioRepository {
   /// Lista todos os usuários
   Future<List<Usuario>> listarTodos();
 }
-

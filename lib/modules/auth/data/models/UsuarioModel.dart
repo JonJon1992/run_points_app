@@ -1,4 +1,5 @@
 import '../../domain/entities/Usuario.dart';
+import '../../../../shared/utils/parse.dart';
 
 class UsuarioModel extends Usuario {
   UsuarioModel({
@@ -27,7 +28,7 @@ class UsuarioModel extends Usuario {
       telefone: json['telefone'] as String?,
       sexo: json['sexo'] as String?,
       dataNascimento: json['dataNascimento'] != null
-          ? DateTime.parse(json['dataNascimento'] as String)
+          ? parseDateTime(json['dataNascimento'] as String)
           : null,
       cpf: json['cpf'] as String?,
       endereco: json['endereco'] as String?,
@@ -36,10 +37,10 @@ class UsuarioModel extends Usuario {
       cep: json['cep'] as String?,
       fotoPerfil: json['fotoPerfil'] as String?,
       dataCadastro: json['dataCadastro'] != null
-          ? DateTime.parse(json['dataCadastro'] as String)
+          ? parseDateTime(json['dataCadastro'] as String)
           : null,
       dataAtualizacao: json['dataAtualizacao'] != null
-          ? DateTime.parse(json['dataAtualizacao'] as String)
+          ? parseDateTime(json['dataAtualizacao'] as String)
           : null,
       ativo: json['ativo'] as bool? ?? true,
     );
@@ -87,7 +88,6 @@ class UsuarioModel extends Usuario {
     );
   }
 
-  @override
   UsuarioModel copyWith({
     String? id,
     String? nome,

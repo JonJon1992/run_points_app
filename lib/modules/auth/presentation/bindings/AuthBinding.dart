@@ -1,21 +1,22 @@
 import 'package:get/get.dart';
+
+import '../../data/datasources/FirebaseAuthDataSource.dart';
 import '../../data/datasources/UsuarioLocalDataSource.dart';
 import '../../data/datasources/UsuarioRemoteDataSource.dart';
-import '../../data/datasources/FirebaseAuthDataSource.dart';
-import '../../data/repositories/UsuarioRepository.dart';
 import '../../data/repositories/AuthRepository.dart';
+import '../../data/repositories/UsuarioRepository.dart';
+import '../../domain/usecases/AtualizarUsuario.dart';
 import '../../domain/usecases/BuscarUsuarioPorEmail.dart';
 import '../../domain/usecases/CriarUsuario.dart';
-import '../../domain/usecases/AtualizarUsuario.dart';
-import '../../domain/usecases/RemoverUsuario.dart';
+import '../../domain/usecases/EnviarEmailRedefinicaoSenha.dart';
 import '../../domain/usecases/LoginComEmailESenha.dart';
 import '../../domain/usecases/LoginComGoogle.dart';
-import '../../domain/usecases/RegistrarComEmailESenha.dart';
 import '../../domain/usecases/Logout.dart';
 import '../../domain/usecases/ObterUsuarioAtual.dart';
-import '../../domain/usecases/EnviarEmailRedefinicaoSenha.dart';
-import '../controllers/UsuarioController.dart';
+import '../../domain/usecases/RegistrarComEmailESenha.dart';
+import '../../domain/usecases/RemoverUsuario.dart';
 import '../controllers/AuthController.dart';
+import '../controllers/UsuarioController.dart';
 
 /// Binding responsável por injetar as dependências do módulo de autenticação.
 class AuthBinding implements Bindings {
@@ -63,8 +64,8 @@ class AuthBinding implements Bindings {
       ),
     );
 
-    Get.lazyPut<AuthController>(
-      () => AuthController(
+    Get.put<AuthController>(
+      AuthController(
         loginComEmailESenha: loginComEmailESenha,
         loginComGoogle: loginComGoogle,
         registrarComEmailESenha: registrarComEmailESenha,
@@ -72,6 +73,7 @@ class AuthBinding implements Bindings {
         obterUsuarioAtual: obterUsuarioAtual,
         enviarEmailRedefinicaoSenha: enviarEmailRedefinicaoSenha,
       ),
+      permanent: true,
     );
   }
 }
